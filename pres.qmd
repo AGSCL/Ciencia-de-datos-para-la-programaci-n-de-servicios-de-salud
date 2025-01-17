@@ -77,7 +77,7 @@ ratio: 16:9 # Slide aspect ratio
 :::: {.columns}
 
 ::: {.column width="40%"}
-### **Control de Versiones**
+#### **Control de Versiones**
 
 #### **Importancia**
 ::: {.nonincremental}
@@ -88,7 +88,11 @@ ratio: 16:9 # Slide aspect ratio
 :::
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
+```{r}
+magick::image_read(path = "assets/git_control_versiones.png")
+magick::image_read(path = "assets/gitpullpush.png")
+```
 
 :::
 
