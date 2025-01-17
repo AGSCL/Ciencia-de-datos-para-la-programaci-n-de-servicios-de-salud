@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------------ */
+/*          TEMA VERANO 2025 - ESCUELA DE SALUD PÚBLICA, U. CHILE     */
+/* ------------------------------------------------------------------ */
+
+/* --- 1. Reglas generales de tipografía y color --- */
+
+/* Fuente base: puedes usar una fuente Google (ej: Open Sans) o la que prefieras */
+.reveal {
+  font-family: 'Open Sans', sans-serif;
+  color: #333; /* color principal del texto */
+  background-color: #ffffff;
+}
+
+/* Títulos (h1, h2, etc.) */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-weight: 700;
+  color: #222; /* puedes modificar a gusto */
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+.reveal a {
+  color: #CA3A50; /* un tono rojizo que contraste */
+}
+
+/* --- 2. Estilo para la Slide de Portada (Title Slide) --- */
+
+/* 
+   Si usas Quarto, la primera slide es la "title slide".
+   Con las siguientes reglas, forzamos que la portada sea LA que use el fondo .svg.
+   Ajusta la altura, posición y tamaño de fondo a conveniencia.
+*/
+
+.reveal .slides section.title-slide {
+  background: url("assets/portada.svg") center center no-repeat;
+  background-size: cover;
+  color: #ffffff; /* Texto blanco para contrastar con la imagen de fondo */
+}
+
+/* Ajuste de contenedor interno para que el texto no se pierda en los bordes */
+.reveal .slides section.title-slide .slide-content {
+  background: rgba(0, 0, 0, 0.2); /* capa semi-transparente sobre la imagen */
+  padding: 2em;
+  border-radius: 8px;
+}
+
+/* Estilo del título principal en la portada */
+.reveal .slides section.title-slide h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  color: #fff; /* Reforzar color blanco */
+}
+
+/* Subtítulo o autor */
+.reveal .slides section.title-slide h2,
+.reveal .slides section.title-slide h3 {
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* --- 3. Estilo para demás diapositivas: fondos, encabezados, etc. --- */
+
+/* Puedes jugar con gradientes suaves en el fondo de tus slides en general */
+.reveal .slides section {
+  /* Por defecto, blanco. Se puede personalizar. */
+  background: #fff;
+}
+
+/* Ejemplo de "caja de contenido destacado" */
+.highlight-box {
+  background-color: #FFD67B; 
+  border-left: 5px solid #F47C00;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+/* --- 4. Bloques de código (si presentas código en R, Python, etc.) --- */
+code, pre code {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Ajusta el tamaño del código en pantalla */
+.reveal pre code {
+  font-size: 0.85em;
+}
+
+/* --- 5. Navegación y controles de RevealJS --- */
+.reveal .controls {
+  color: #ca3a50; /* color de flechas y controles de diapositivas */
+}
+
+.reveal .progress {
+  background-color: #eee; /* barra de progreso */
+}
+
+.reveal .progress span {
+  background-color: #ca3a50; /* color de la barra cargada */
+}
+
+/* --- 6. Ajuste responsivo en pantallas pequeñas --- */
+@media screen and (max-width: 768px) {
+  .reveal .slides section.title-slide h1 {
+    font-size: 2rem;
+  }
+  .reveal .slides section.title-slide h2,
+  .reveal .slides section.title-slide h3 {
+    font-size: 1.2rem;
+  }
+}

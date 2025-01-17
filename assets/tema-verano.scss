@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+/* Aquí defines variables globales como colores, tamaños de fuente, etc. */
+$primary-color: #ca3a50;
+$secondary-color: #FFD67B;
+$text-color: #333;
+$font-family: 'Open Sans', sans-serif;
+
+/*-- scss:rules --*/
+/* Reglas generales de estilo */
+.reveal {
+  font-family: $font-family;
+  color: $text-color;
+  background-color: #ffffff;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.reveal a {
+  color: $primary-color;
+}
+
+/* Portada específica */
+.reveal .slides section.title-slide {
+  background: url("assets/portada.svg") center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.reveal .slides section.title-slide h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.reveal .slides section.title-slide h2 {
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/*-- scss:mixins --*/
+/* Mixins reutilizables */
+@mixin highlight-box {
+  background-color: $secondary-color;
+  border-left: 5px solid darken($secondary-color, 10%);
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+/* Usando el mixin */
+.highlight-box {
+  @include highlight-box;
+}
+
+/*-- scss:functions --*/
+/* Define funciones si las necesitas (opcional) */
+
+/*-- scss:uses --*/
+/* Importar otros archivos SCSS o librerías si lo necesitas */
