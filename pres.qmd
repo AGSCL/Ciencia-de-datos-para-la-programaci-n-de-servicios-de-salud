@@ -216,6 +216,7 @@ ratio: 16:9 # Slide aspect ratio
 :::
 
 ---
+
 ## Preguntas y discusión
 
 :::: {.columns}
