@@ -112,7 +112,7 @@ ratio: 16:9 # Slide aspect ratio
 
 ---
 
-## Uso de GitHub para monitorear oferta y demanda {.notes}
+## Uso de GitHub para monitorear oferta y demanda {.smaller}
 
 **Flujo recomendado**:
 
@@ -231,7 +231,7 @@ ratio: 16:9 # Slide aspect ratio
 
 ::: {.column width="50%"}
 **¡Gracias!**  
-**Contacto**: [tu_correo@ejemplo.cl](mailto:gonzalez.santacruz.andres@gmail.com)
+**Contacto**: [gonzalez.santacruz.andres@gmail.com](mailto:gonzalez.santacruz.andres@gmail.com)
 :::
 
 :::: 
