@@ -1,7 +1,7 @@
 ---
 title: "Gestión de Brechas en Redes Integradas de Salud"
 subtitle: "Utilizando GitHub como herramienta de colaboración y monitoreo"
-author: "René Lagos Barrios & Andrés González Santa Cruz"
+author: "René Lagos Barrios, Cristóbal Cuadrado Nahum, Andrés González Santa Cruz"
 date-format: "D [d]e MMM, YYYY"
 date: last-modified
 lang: es
@@ -91,9 +91,8 @@ ratio: 16:9 # Slide aspect ratio
 ::: {.column width="50%"}
 ```{r}
 magick::image_read(path = "assets/git_control_versiones.png")
-magick::image_read(path = "assets/gitpullpush.png")
+magick::image_read(path = "assets/git_commit_fire.png")
 ```
-
 :::
 
 :::: 
@@ -112,136 +111,125 @@ magick::image_read(path = "assets/gitpullpush.png")
 - **Manejo de Versiones:** Ayuda a trabajar con diferentes versiones de archivos.
 
 - **Colaboración:** Permite combinar y seguir cambios realizados por distintas personas.
-:::
 
----
-
-## Uso de GitHub para monitorear oferta y demanda {.smaller}
-
-**Flujo recomendado**:
-
-1. **Cargar datos** de cada establecimiento (oferta: cupos, profesionales, recursos; demanda: citas solicitadas, tasa de uso, etc.) en un repositorio seguro.
-
-2. **Scripts de análisis** (en R, Python u otra herramienta) para calcular brechas de oferta-demanda y cobertura efectiva.
-
-3. **Dashboards/Reportes** generados automáticamente (con Quarto, R Markdown o similares).
-
-4. **Documentación colaborativa**: guías, manuales, criterios de cálculo, versiones de la cartera de servicios.
-
-5. **Uso de Issues y Pull Requests**:  
-   - Para discutir la metodología de cálculo o actualización de parámetros.  
-   - Para incorporar nuevas funcionalidades o correcciones.
-
-::: {.notes} 
-**Pregunta Interactiva**:  
-¿Cómo integran actualmente la información desde diferentes establecimientos?  
-- Hoja de cálculo compartida.  
-- Sistema interno (ERP/HIS).  
-- No tenemos un proceso estandarizado.  
-- Otro método.  
-
-:::
-
----
-
-## Ejemplo de estructura en GitHub
-
-```plaintext
-├── README.md
-├── datos/
-│   ├── APS/          # Datos de Atención Primaria
-│   ├── Especialidades/
-│   └── Urgencias/
-├── scripts/
-│   ├── analisis_brechas.R
-│   └── indicadores_cobertura.py
-├── docs/
-│   ├── plan_programacion.md
-│   └── manual_de_uso.md
-└── dashboards/
-    └── informe_brechas.qmd
-```
-
-::: {.notes} 
-- **README.md**: Explica el propósito del repositorio y guías generales.
-- **datos/**: Contiene la información en bruto (idealmente anonimizada o con acceso restringido).
-- **scripts/**: Incluye el código para análisis y procesamiento.
-- **docs/**: Documentación del proyecto, manuales y procedimientos.
-- **dashboards/**: Plantillas o archivos para generar reportes dinámicos.
+**MEME** "Este meme es gracioso, pero es real: un commit es su seguro de vida contra errores"
 :::
 
 
----
-
-## Ventajas de esta metodología
-
-1. **Estandarización** de datos y procesos:  
-2. **Colaboración remota**:  
-3. **Rápida retroalimentación**:  
-4. **Escalabilidad**:  
-5. **Mayor transparencia**:  
-
-**Pregunta**:  
-¿Cuál de estas ventajas consideran más valiosa en su contexto actual?  
-
-
-::: {.notes}
-`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
-1. **Estandarización** de datos y procesos:  
-   - Facilita la comparación entre establecimientos y períodos (trimestral, anual).
-2. **Colaboración remota**:  
-   - Equipos de distintas regiones pueden trabajar simultáneamente.
-3. **Rápida retroalimentación**:  
-   - Los cambios en datos o métodos se reflejan en tiempo real en los reportes.
-4. **Escalabilidad**:  
-   - Se pueden sumar nuevos establecimientos o ampliar la cartera de servicios sin perder la trazabilidad.
-5. **Mayor transparencia**:  
-   - Cualquier modificación queda registrada (quién, cuándo y qué cambió).
-:::
-
----
-
-## Conclusiones
-
-- Medir la brecha de oferta y demanda **no es solo un ejercicio cuantitativo**, sino una oportunidad para **mejorar la efectividad** de los servicios de salud.
-- **GitHub** y herramientas similares permiten:
-  - **Trabajo colaborativo**, registro histórico y mayor flexibilidad.
-  - **Automatizar** y **estandarizar** reportes e indicadores.
-  
-
-::: {.notes}
-`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
-**Casos de éxito y lecciones aprendidas**
-- **Caso A**: Red primaria-SECUNDARIA que redujo brechas de especialidad cardiología un 20% tras mejorar la derivación y seguimiento.
-- **Caso B**: Uso de GitHub para **gestionar agendas** de profesionales y facilitar reportes mensuales a las autoridades.
-- **Lección**: La adopción requiere **capacitación** y un cambio cultural en la forma de colaborar y almacenar datos.
-
-- La **cobertura efectiva** debe ser el foco central: no solo cuántas atenciones se realizan, sino la calidad y el impacto en la salud de la población.
-:::
-
----
-
-## Preguntas y discusión
+## Conceptos
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
+#### **Control de Versiones**
 
-- ¿Qué pasos se podrían implementar inmediatamente en sus establecimientos para comenzar a medir y reducir brechas?
+#### **Importancia**
+::: {.nonincremental}
+- Commits
+- Stagging area
+- Ramas (*Branches*)
+- Fusiones (*Merges*)
+- Repositorios Remotos (*remotes*)
+- Clonación
+:::
+:::
 
-- ¿Qué barreras ven para la adopción de GitHub u otras herramientas similares?
+::: {.column width="40%"}
+```{r}
+magick::image_read(path = "assets/flujo_github.png")
+```
+```{r}
+magick::image_read(path = "assets/gitpullpush.png")
+```
+:::
 
+::::
+
+::: {.notes}
+`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
+**INTRODUCCIÓN A LA TERMINOLOGÍA**
+
+Para entender cómo funciona este ecosistema, debemos dominar seis conceptos clave. Imaginen esto como un flujo de trabajo lógico:
+
+1.  **Staging Area (Zona de preparación):** Es el paso previo. Imagínalo como poner tus archivos en una "caja de mudanza". Aquí seleccionas qué cambios específicos quieres guardar. No se han guardado todavía, solo los estás "preparando".
+
+2.  **Commits (Confirmaciones):** Es cuando cierras y precintas esa caja. Es una "foto" permanente del estado de tu proyecto en ese momento.
+    * *Sobre la imagen del fuego:* Como ven en el meme, la regla de oro es: "Haz commits a menudo". Si algo sale mal (o hay un incendio), querrás tener tu trabajo guardado hasta el último momento posible.
+
+3.  **Ramas (Branches):** Son líneas de tiempo paralelas. Te permiten trabajar en una nueva funcionalidad o experimento sin romper el código principal que ya funciona. Es como hacer una copia del proyecto para "jugar" sin riesgo.
+
+4.  **Fusiones (Merges):** Una vez que tu experimento en la rama funcionó, lo "fusionas" de vuelta a la línea principal. Es integrar esos cambios.
+
+5.  **Repositorios Remotos:** Es la versión de tu proyecto alojada en la nube (GitHub). Es lo que permite que otros lo vean y descarguen.
+
+6.  **Clonación:** Es simplemente descargar una copia exacta de ese repositorio remoto a tu computadora para empezar a trabajar.
 :::
 
 
-::: {.column width="50%"}
-**¡Gracias!**  
+## Github Desktop
+
+:::: {.columns}
+
+::: {.column width="60%"}
+**Requisitos Previos**:
+
+- Instalar desde GitHub Desktop.
+
+- Crear una cuenta en GitHub.
+
+**Siguientes Pasos**:
+
+- Configurar repositorio local y conectar GitHub para iniciar control de versiones.
+:::
+
+::: {.column width="40%"}
+
+```{r}
+magick::image_read(path = "assets/desktop_cli.png")
+```
+:::
+
+::::
+
+::: {.notes}
+`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
+**DEL CONCEPTO A LA PRÁCTICA**
+
+Ahora, ¿cómo hacemos todo esto sin volvernos locos escribiendo códigos en una pantalla negra? Aquí entra **GitHub Desktop**.
+
+**¿QUÉ ES?**
+Es una interfaz gráfica (GUI) que nos permite hacer todo lo que acabamos de ver (commits, ramas, fusiones) pero haciendo *clic* en botones en lugar de memorizar comandos de terminal.
+
+**REQUISITOS (LA TAREA PARA HOY):**
+Para empezar, necesitamos dos cosas básicas:
+1.  Tener una **cuenta creada en GitHub.com**.
+2.  Tener instalado el software **GitHub Desktop** en su computadora.
+
+**FLUJO DE TRABAJO INICIAL:**
+Una vez instalado, el proceso es muy sencillo:
+-   Abrimos la aplicación e iniciamos sesión.
+-   Vamos a "File" > "Add Local Repository" y buscamos la carpeta donde tenemos nuestro proyecto de R (o cualquier código).
+-   Al hacer esto, GitHub Desktop detectará automáticamente los cambios y nos permitirá hacer nuestro primer "Commit" y subirlo a la nube ("Push") de manera visual.
+
+**VENTAJA:**
+La gran ventaja aquí es que podemos ver visualmente (en verde y rojo) qué líneas agregamos y cuáles borramos antes de guardar nada.
+
+**MEME** "Es gracioso, pero es real: un commit es su seguro de vida contra errores".
+:::
+
+
+---
+## Flujo de trabajo
+
+[]()
+
+---
+## Muchas gracias
+
+
 **Contacto**: [gonzalez.santacruz.andres@gmail.com](mailto:gonzalez.santacruz.andres@gmail.com)
-:::
 
-:::: 
-
+  
 ```yaml
 # Fin de la presentación
 ```
-
