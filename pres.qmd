@@ -9,7 +9,6 @@ format:
   revealjs:
     theme: [default, "assets/tema-verano.scss"]
     slideNumber: true
-theme: simple
 transition: slide
 self-contained: true # Embeds all assets locally
 ratio: 16:9 # Slide aspect ratio
@@ -146,7 +145,6 @@ magick::image_read(path = "assets/gitpullpush.png")
 ::::
 
 ::: {.notes}
-`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
 **INTRODUCCIÓN A LA TERMINOLOGÍA**
 
 Para entender cómo funciona este ecosistema, debemos dominar seis conceptos clave. Imaginen esto como un flujo de trabajo lógico:
@@ -192,7 +190,6 @@ magick::image_read(path = "assets/desktop_cli.png")
 ::::
 
 ::: {.notes}
-`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
 **DEL CONCEPTO A LA PRÁCTICA**
 
 Ahora, ¿cómo hacemos todo esto sin volvernos locos escribiendo códigos en una pantalla negra? Aquí entra **GitHub Desktop**.
@@ -217,19 +214,44 @@ La gran ventaja aquí es que podemos ver visualmente (en verde y rojo) qué lín
 **MEME** "Es gracioso, pero es real: un commit es su seguro de vida contra errores".
 :::
 
-
 ---
 ## Flujo de trabajo
 
-[]()
+### 🎬 Práctica Guiada: De la Teoría a la Acción
 
----
+Aquí tienen el enlace a un **ejercicio práctico** para ver el proceso completo (Clonar, Commit, Push) utilizando **GitHub Desktop**.
+
+[Tutorial Completo en YouTube (12 min)](https://youtu.be/hpsWDHE06_s)
+
+::: {.notes}
+`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
+**DEL CONCEPTO A LA PRÁCTICA**
+
+Ahora, ¿cómo hacemos todo esto sin volvernos locos escribiendo códigos en una pantalla negra? Aquí entra **GitHub Desktop**.
+
+**¿QUÉ ES?**
+Es una interfaz gráfica (GUI) que nos permite hacer todo lo que acabamos de ver (commits, ramas, fusiones) pero haciendo *clic* en botones en lugar de memorizar comandos de terminal.
+
+**REQUISITOS (LA TAREA PARA HOY):**
+Para empezar, necesitamos dos cosas básicas:
+1.  Tener una **cuenta creada en GitHub.com**.
+2.  Tener instalado el software **GitHub Desktop** en su computadora.
+
+**FLUJO DE TRABAJO INICIAL:**
+Una vez instalado, el proceso es muy sencillo:
+-   Abrimos la aplicación e iniciamos sesión.
+-   Vamos a "File" > "Add Local Repository" y buscamos la carpeta donde tenemos nuestro proyecto de R (o cualquier código).
+-   Al hacer esto, GitHub Desktop detectará automáticamente los cambios y nos permitirá hacer nuestro primer "Commit" y subirlo a la nube ("Push") de manera visual.
+
+**VENTAJA:**
+La gran ventaja aquí es que podemos ver visualmente (en verde y rojo) qué líneas agregamos y cuáles borramos antes de guardar nada.
+:::
+
+
 ## Muchas gracias
-
 
 **Contacto**: [gonzalez.santacruz.andres@gmail.com](mailto:gonzalez.santacruz.andres@gmail.com)
 
-  
 ```yaml
 # Fin de la presentación
 ```
