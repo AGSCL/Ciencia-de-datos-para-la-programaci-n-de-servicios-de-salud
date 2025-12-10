@@ -5,14 +5,30 @@ author: "René Lagos Barrios, Cristóbal Cuadrado Nahum, Andrés González Santa
 date-format: "D [d]e MMM, YYYY"
 date: last-modified
 lang: es
+transition: slide
+self-contained: true # Embeds all assets locally
+ratio: 16:9 # Slide aspect ratio
 format:
   revealjs:
     theme: [default, "assets/tema-verano.scss"]
     slideNumber: true
-transition: slide
-self-contained: true # Embeds all assets locally
-ratio: 16:9 # Slide aspect ratio
+    include-after-body: 
+          - text: |
+              <script>
+              // Script para activar Zoom con Doble Click
+              document.addEventListener('dblclick', function(event) {
+                event.preventDefault();
+                var clickEvent = new MouseEvent('click', {
+                  view: window,
+                  bubbles: true,
+                  cancelable: true,
+                  altKey: true // Esto simula presionar Alt
+                });
+                event.target.dispatchEvent(clickEvent);
+              });
+              </script> 
 ---
+
 
 ## Introducción
 
@@ -22,6 +38,8 @@ ratio: 16:9 # Slide aspect ratio
 ### Objetivos
 
 - Explorar cómo **GitHub** puede mejorar la gestión y el monitoreo de datos de salud.
+
+- Demostrar el uso de GitHub para **colaboración** y **transparencia** en equipos multidisciplinarios.
 :::
 
 ::: {.column width="35%"}
@@ -29,7 +47,11 @@ ratio: 16:9 # Slide aspect ratio
 :::
 
 ::::
+::: {.notes}
+`r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
+**Buenas tardes. Mi nombre es andrés gonzález, y en el marco del taller de  Gestión de Brechas en Redes Integradas de Salud, les presentaré un módulo en que utilizaremos GitHub como herramienta de colaboración y monitoreo**
 
+::: 
 
 ---
 
@@ -98,8 +120,6 @@ magick::image_read(path = "assets/git_commit_fire.png")
 
 ::: {.notes}
 `r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
-- Qué es GItHub, para qué sirve
-- Sistema de control de versiones (Git) para seguimiento de software y plataforma para compartir proyectos (GitHub). Incluye GitHub Desktop.
 
 **PARA QUÉ SIRVE**
 
@@ -111,7 +131,6 @@ magick::image_read(path = "assets/git_commit_fire.png")
 
 - **Colaboración:** Permite combinar y seguir cambios realizados por distintas personas.
 
-**MEME** "Este meme es gracioso, pero es real: un commit es su seguro de vida contra errores"
 :::
 
 
@@ -211,7 +230,6 @@ Una vez instalado, el proceso es muy sencillo:
 **VENTAJA:**
 La gran ventaja aquí es que podemos ver visualmente (en verde y rojo) qué líneas agregamos y cuáles borramos antes de guardar nada.
 
-**MEME** "Es gracioso, pero es real: un commit es su seguro de vida contra errores".
 :::
 
 ---
@@ -227,24 +245,9 @@ Aquí tienen el enlace a un **ejercicio práctico** para ver el proceso completo
 `r invisible("#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#")`
 **DEL CONCEPTO A LA PRÁCTICA**
 
-Ahora, ¿cómo hacemos todo esto sin volvernos locos escribiendo códigos en una pantalla negra? Aquí entra **GitHub Desktop**.
-
-**¿QUÉ ES?**
-Es una interfaz gráfica (GUI) que nos permite hacer todo lo que acabamos de ver (commits, ramas, fusiones) pero haciendo *clic* en botones en lugar de memorizar comandos de terminal.
-
-**REQUISITOS (LA TAREA PARA HOY):**
-Para empezar, necesitamos dos cosas básicas:
-1.  Tener una **cuenta creada en GitHub.com**.
-2.  Tener instalado el software **GitHub Desktop** en su computadora.
-
-**FLUJO DE TRABAJO INICIAL:**
-Una vez instalado, el proceso es muy sencillo:
--   Abrimos la aplicación e iniciamos sesión.
--   Vamos a "File" > "Add Local Repository" y buscamos la carpeta donde tenemos nuestro proyecto de R (o cualquier código).
--   Al hacer esto, GitHub Desktop detectará automáticamente los cambios y nos permitirá hacer nuestro primer "Commit" y subirlo a la nube ("Push") de manera visual.
-
-**VENTAJA:**
-La gran ventaja aquí es que podemos ver visualmente (en verde y rojo) qué líneas agregamos y cuáles borramos antes de guardar nada.
+- Abrimos Google Colab
+- Descargamos el script y el notebook
+- Para después clonar el repositorio en GitHub Desktop
 :::
 
 
